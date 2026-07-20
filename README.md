@@ -10,6 +10,7 @@ A Plugin for Neovim that automatically installs and configures LSPs and Formatte
 ## Requirements
 - Neovim 0.11 or higher
 
+- nvim-lspconfig
 - mason.nvim
 - mason-lspconfig
 - conform.nvim
@@ -29,6 +30,7 @@ A Plugin for Neovim that automatically installs and configures LSPs and Formatte
 	"MoDevIO/autolsp.nvim",
 
 	dependencies = {
+        "neovim/nvim-lspconfig",
 		"mason-org/mason.nvim",
 		"mason-org/mason-lspconfig.nvim",
 		"stevearc/conform.nvim",
@@ -46,6 +48,7 @@ A Plugin for Neovim that automatically installs and configures LSPs and Formatte
 use {
     "MoDevIO/autolsp.nvim",
     requires = {
+        "neovim/nvim-lspconfig",
         "mason-org/mason.nvim",
         "mason-org/mason-lspconfig.nvim",
         "stevearc/conform.nvim",
@@ -62,6 +65,7 @@ use {
 
 ```vim
 Plug 'MoDevIO/autolsp.nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'mason-org/mason.nvim'
 Plug 'mason-org/mason-lspconfig.nvim'
 Plug 'stevearc/conform.nvim'
