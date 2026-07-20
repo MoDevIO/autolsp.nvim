@@ -1,5 +1,21 @@
 local M = {}
 
+local function setupConform()
+  local config = require("autolsp.config")
+
+  local formatters_by_ft = {}
+
+  for ft, server in pairs(config.options.servers) do
+    if server.formatter then
+      formatters_by_ft[ft] = { server.formatter }
+    end
+  end
+
+  require("conform").setup({
+    formatters_by_ft = formatters_by_ft,
+  })
+end
+
 local function installLSP(server)
 	local registry = require("mason-registry")
 
@@ -59,6 +75,8 @@ end
 
 function M.setup()
 	local config = require("autolsp.config")
+
+  setupConform()
 
 	vim.api.nvim_create_autocmd("FileType", {
 		callback = function()
