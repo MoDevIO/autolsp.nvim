@@ -1,6 +1,6 @@
 # autolsp.nvim
 
-A Plugin for Neovim that automatically installs and configures LSPs and Formatters for you. It is designed to be easy to use and requires minimal configuration.
+A Plugin for Neovim that automatically installs and configures LSPs and formatters for you. It is designed to be easy to use and requires minimal configuration.
 
 - [Requirements](#requirements)
 - [Features](#features)
