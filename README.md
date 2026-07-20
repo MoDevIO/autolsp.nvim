@@ -5,7 +5,7 @@ A Plugin for Neovim that automatically installs and configures LSPs and Formatte
 - [Requirements](#requirements)
 - [Features](#features)
 - [Installation](#installation)
-
+- [Configuration](#configuration)
 
 ## Requirements
 - Neovim 0.11 or higher
@@ -71,3 +71,83 @@ Plug 'mason-org/mason-lspconfig.nvim'
 Plug 'stevearc/conform.nvim'
 ```
 </details>
+
+## Configuration
+
+<details>
+  <summary>Default Configuration</summary>
+
+```lua
+require("autolsp").setup({
+	auto_install = true,
+    format_on_save = true,
+
+	servers = {
+        lua = {
+            lsp = "lua_ls",
+            mason = "lua-language-server",
+            formatter = "stylua",
+        },
+
+        javascript = {
+            lsp = "vtsls",
+            mason = "vtsls",
+            formatter = "prettierd",
+        },
+
+        javascriptreact = {
+            lsp = "vtsls",
+            mason = "vtsls",
+            formatter = "prettierd",
+        },
+
+        typescript = {
+            lsp = "vtsls",
+            mason = "vtsls",
+            formatter = "prettierd",
+        },
+
+        typescriptreact = {
+            lsp = "vtsls",
+            mason = "vtsls",
+            formatter = "prettierd",
+        },
+
+        css = {
+            lsp = "cssls",
+            mason = "css-lsp",
+            formatter = "prettierd",
+        },
+
+        html = {
+            lsp = "html",
+            mason = "html-lsp",
+            formatter = "prettierd",
+        },
+
+        python = {
+            lsp = "pyright",
+            mason = "pyright",
+            formatter = "black",
+        },
+
+        rust = {
+            lsp = "rust_analyzer",
+            mason = "rust-analyzer",
+            formatter = "rustfmt",  
+        },
+
+        c = {
+            lsp = "clangd",
+            mason = "clangd",
+            formatter = "clang-format",
+        },
+
+        cpp = {
+            lsp = "clangd",
+            mason = "clangd",
+            formatter = "clang-format",
+        },
+    },
+})
+```

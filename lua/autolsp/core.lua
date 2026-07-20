@@ -16,6 +16,14 @@ local function setupConform()
   })
 end
 
+local function formatOnSave()
+  vim.api.nvim_create_autocmd("BufWritePre", {
+    callback = function()
+      require("conform").format({ async = false })
+    end,
+  })
+end
+
 local function installLSP(server)
 	local registry = require("mason-registry")
 
@@ -77,6 +85,10 @@ function M.setup()
 	local config = require("autolsp.config")
 
   setupConform()
+
+  if config.options.format_on_save then
+    formatOnSave()
+  end
 
 	vim.api.nvim_create_autocmd("FileType", {
 		callback = function()

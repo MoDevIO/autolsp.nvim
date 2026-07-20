@@ -2,6 +2,7 @@ local M = {}
 
 M.options = {
 	auto_install = true,
+  format_on_save = true,
 
 	servers = {
 		lua = {
