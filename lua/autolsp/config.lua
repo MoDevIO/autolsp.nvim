@@ -20,56 +20,62 @@ M.options = {
 		javascriptreact = {
 			lsp = "vtsls",
 			mason = "vtsls",
-      formatter = "prettierd",
+      		formatter = "prettierd",
 		},
 
 		typescript = {
 			lsp = "vtsls",
 			mason = "vtsls",
-      formatter = "prettierd",
+      		formatter = "prettierd",
 		},
 
 		typescriptreact = {
 			lsp = "vtsls",
 			mason = "vtsls",
-      formatter = "prettierd",
+      		formatter = "prettierd",
 		},
 
 		css = {
 			lsp = "cssls",
 			mason = "css-lsp",
-      formatter = "prettierd",
+      		formatter = "prettierd",
 		},
 
 		html = {
 			lsp = "html",
 			mason = "html-lsp",
-      formatter = "prettierd",
+      		formatter = "prettierd",
 		},
 
 		python = {
 			lsp = "pyright",
 			mason = "pyright",
-      formatter = "black",
+      		formatter = "black",
 		},
 
 		rust = {
 			lsp = "rust_analyzer",
 			mason = "rust-analyzer",
-      formatter = "rustfmt",  
+      		formatter = "rustfmt",  
 		},
 
 		c = {
 			lsp = "clangd",
 			mason = "clangd",
-      formatter = "clang-format",
+      		formatter = "clang-format",
 		},
 
 		cpp = {
 			lsp = "clangd",
 			mason = "clangd",
-      formatter = "clang-format",
+      		formatter = "clang-format",
 		},
+
+		arduino = {
+			lsp = "arduino_language_server",
+			mason = "arduino-language-server",
+			formatter = "clang-format",
+		}
 	},
 }
 
